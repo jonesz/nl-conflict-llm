@@ -1,0 +1,11 @@
+https://huggingface.co/denizspynk/requirements_ambiguity_v2
+
+"""
+The model was trained on ReqAmbi dataset. This dataset is private and contains 2,523 requirement formulations. 
+Each requirement is manually labeled 0 (unambiguous) or 1 (ambiguous). The dataset is split 2,019/253/253 into train, validation and test. 
+The reported metrics are from the evaluation on the test set. ThThe model was trained on ReqAmbi dataset. 
+This dataset is private and contains 2,523 requirement formulations. Each requirement is manually labeled 0 (unambiguous) or 1 (ambiguous). 
+The dataset is split 2,019/253/253 into train, validation and test. The reported metrics are from the evaluation on the test set. 
+The validation set was used for cross-validation during traininge validation set was used for cross-validation during training.
+
+"""

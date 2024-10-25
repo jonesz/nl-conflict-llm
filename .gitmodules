@@ -1,0 +1,3 @@
+[submodule "fret"]
+	path = fret
+	url = https://github.com/NASA-SW-VnV/fret
