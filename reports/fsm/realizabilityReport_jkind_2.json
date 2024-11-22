@@ -1,0 +1,1126 @@
+{
+    "projectName": "FSM",
+    "systemComponents": [
+        {
+            "name": "FSM",
+            "comments": "",
+            "monolithic": {
+                "result": "UNCHECKED",
+                "time": "",
+                "diagnosisStatus": "",
+                "diagnosisReport": "",
+                "error": ""
+            },
+            "compositional": {
+                "result": "UNREALIZABLE",
+                "connectedComponents": [
+                    {
+                        "ccName": "cc0",
+                        "result": "UNREALIZABLE",
+                        "time": "0.505s",
+                        "requirements": [
+                            "FSM-002",
+                            "FSM-005",
+                            "FSM-003",
+                            "FSM-008",
+                            "FSM-009",
+                            "FSM-007",
+                            "FSM-004",
+                            "FSM-006"
+                        ],
+                        "diagnosisStatus": "ERROR",
+                        "diagnosisReport": "",
+                        "error": "Command failed: jrealizability -json -fixpoint -timeout 120000 /home/ethan/Documents/fret-analysis/FSMSpec_diagnosticQuery_42.lus\n==========================================\n  JRealizability 4.5.1-202311081135\n==========================================\n\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nUNKNOWN || True for 0 steps || Time = 1.402s\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\nfixpoint process failed\njkind.JKindException: Z3 terminated unexpectedly\n\tat jkind.solvers.smtlib2.SmtLib2Solver.readFromSolver(SmtLib2Solver.java:165)\n\tat jkind.solvers.z3.Z3Solver.qeQuery(Z3Solver.java:238)\n\tat jkind.realizability.engines.RealizabilityFixpointEngine.checkRealizableWithQE(RealizabilityFixpointEngine.java:308)\n\tat jkind.realizability.engines.RealizabilityFixpointEngine.main(RealizabilityFixpointEngine.java:66)\n\tat jkind.realizability.engines.RealizabilityEngine.run(RealizabilityEngine.java:72)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+                        "traceInfo": null,
+                        "diagnosisSolver": "jkind"
+                    },
+                    {
+                        "ccName": "cc1",
+                        "result": "UNREALIZABLE",
+                        "time": "0.401s",
+                        "requirements": [
+                            "FSM-011",
+                            "FSM-012",
+                            "FSM-010",
+                            "FSM-013"
+                        ],
+                        "diagnosisStatus": "DIAGNOSED",
+                        "diagnosisReport": {
+                            "Counterexamples": [
+                                {
+                                    "traceLength": "1",
+                                    "requirements": [
+                                        "FSM011",
+                                        "FSM010"
+                                    ],
+                                    "Counterexample": [
+                                        {
+                                            "name": "limits",
+                                            "type": "bool",
+                                            "Step 0": true
+                                        },
+                                        {
+                                            "name": "request",
+                                            "type": "bool",
+                                            "Step 0": false
+                                        },
+                                        {
+                                            "name": "senstate",
+                                            "type": "real",
+                                            "Step 0": 0
+                                        },
+                                        {
+                                            "name": "SENSTATE",
+                                            "type": "real",
+                                            "Step 0": 0
+                                        },
+                                        {
+                                            "name": "FSM_010",
+                                            "type": "bool",
+                                            "Step 0": false
+                                        },
+                                        {
+                                            "name": "FSM_011",
+                                            "type": "bool",
+                                            "Step 0": false
+                                        },
+                                        {
+                                            "name": "sen_fault_state",
+                                            "type": "real",
+                                            "Step 0": 2
+                                        },
+                                        {
+                                            "name": "sen_nominal_state",
+                                            "type": "real",
+                                            "Step 0": 0
+                                        },
+                                        {
+                                            "name": "sen_transition_state",
+                                            "type": "real",
+                                            "Step 0": 1
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Conflicts": [
+                                {
+                                    "Conflict": [
+                                        "FSM011",
+                                        "FSM010"
+                                    ]
+                                }
+                            ],
+                            "Requirements": [
+                                "FSM011",
+                                "FSM012",
+                                "FSM010",
+                                "FSM013"
+                            ]
+                        },
+                        "error": "",
+                        "traceInfo": null,
+                        "diagnosisSolver": "jkind"
+                    },
+                    {
+                        "ccName": "cc2",
+                        "result": "REALIZABLE",
+                        "time": "0.3s",
+                        "requirements": [
+                            "FSM-001"
+                        ],
+                        "diagnosisStatus": "",
+                        "diagnosisReport": "",
+                        "error": "",
+                        "traceInfo": {
+                            "K": 4,
+                            "Trace": [
+                                {
+                                    "name": "apfail",
+                                    "type": "bool",
+                                    "Step 0": false,
+                                    "Step 1": false,
+                                    "Step 2": false,
+                                    "Step 3": false
+                                },
+                                {
+                                    "name": "limits",
+                                    "type": "bool",
+                                    "Step 0": false,
+                                    "Step 1": false,
+                                    "Step 2": false,
+                                    "Step 3": false
+                                },
+                                {
+                                    "name": "standby",
+                                    "type": "bool",
+                                    "Step 0": false,
+                                    "Step 1": false,
+                                    "Step 2": false,
+                                    "Step 3": false
+                                },
+                                {
+                                    "name": "supported",
+                                    "type": "bool",
+                                    "Step 0": false,
+                                    "Step 1": false,
+                                    "Step 2": false,
+                                    "Step 3": false
+                                },
+                                {
+                                    "name": "pullup",
+                                    "type": "bool",
+                                    "Step 0": false,
+                                    "Step 1": false,
+                                    "Step 2": false,
+                                    "Step 3": false
+                                },
+                                {
+                                    "name": "FSM_001",
+                                    "type": "bool",
+                                    "Step 0": true,
+                                    "Step 1": true,
+                                    "Step 2": true,
+                                    "Step 3": true
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "error": "",
+                "solver": "jkind"
+            },
+            "requirements": [
+                {
+                    "reqid": "FSM-002",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The autopilot shall change states from TRANSITION to STANDBY when the pilot is in control (standby).",
+                    "fulltext": "FSM shall always satisfy (standby & state = ap_transition_state) => STATE = ap_standby_state",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "standby",
+                            "state",
+                            "ap_transition_state",
+                            "STATE",
+                            "ap_standby_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            10,
+                            15
+                        ],
+                        "post_condition": "(( standby & state = ap_transition_state ) => STATE = ap_standby_state)",
+                        "responseTextRange": [
+                            17,
+                            91
+                        ],
+                        "diagramVariables": "Response = <b><i>(( standby & state = ap_transition_state ) => STATE = ap_standby_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+                        "post_condition_unexp_ft": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+                        "post_condition_SMV_pt": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+                        "post_condition_SMV_ft": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+                        "post_condition_coco_smv": "((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state))",
+                        "post_condition_coco": "((standby and (state = ap_transition_state)) => (STATE = ap_standby_state))",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+                        "ptFinBtwExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptFinBtwExpanded": "(H ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpanded": "(LAST V ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+                        "ftInfBtwExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfBtwExpanded": "(G ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+                        "ftFinBtwExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftFinBtwExpanded": "(LAST V ((standby & (state = ap_transition_state)) -> (STATE = ap_standby_state)))",
+                        "CoCoSpecCode_fetched": "(H($post_condition_coco$))",
+                        "CoCoSpecCode": "(H(((standby and (state = ap_transition_state)) => (STATE = ap_standby_state))))",
+                        "component": "FSM"
+                    },
+                    "_id": "9734a570-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-3cf2f19abf08bcda486b35636638f75e"
+                },
+                {
+                    "reqid": "FSM-005",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The autopilot shall change states from NOMINAL to STANDBY when the pilot is in control (standby).",
+                    "status": "",
+                    "fulltext": "FSM shall always satisfy (state=ap_nominal_state & standby)  => STATE = ap_standby_state",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "state",
+                            "ap_nominal_state",
+                            "standby",
+                            "STATE",
+                            "ap_standby_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            10,
+                            15
+                        ],
+                        "post_condition": "(( state = ap_nominal_state & standby ) => STATE = ap_standby_state)",
+                        "responseTextRange": [
+                            17,
+                            87
+                        ],
+                        "diagramVariables": "Response = <b><i>(( state = ap_nominal_state & standby ) => STATE = ap_standby_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+                        "post_condition_unexp_ft": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+                        "post_condition_SMV_pt": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+                        "post_condition_SMV_ft": "(((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state))",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+                        "CoCoSpecCode": "H((((state = ap_nominal_state) and standby) => (STATE = ap_standby_state)))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpandedUnoptimized": "(LAST V (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+                        "ftExpanded": "(LAST V (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G (((state = ap_nominal_state) & standby) -> (STATE = ap_standby_state)))",
+                        "component": "FSM"
+                    },
+                    "template": {},
+                    "_id": "9734cc80-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "2-fa59a2c2adf4439fcc23fcef43f8ee2e"
+                },
+                {
+                    "reqid": "FSM-003",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The autopilot shall change states from TRANSITION to NOMINAL when the system is supported and sensor data is good.",
+                    "fulltext": "FSM shall always satisfy (state = ap_transition_state & good & supported) => STATE = ap_nominal_state",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "state",
+                            "ap_transition_state",
+                            "good",
+                            "supported",
+                            "STATE",
+                            "ap_nominal_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            10,
+                            15
+                        ],
+                        "post_condition": "(( state = ap_transition_state & good & supported ) => STATE = ap_nominal_state)",
+                        "responseTextRange": [
+                            17,
+                            100
+                        ],
+                        "diagramVariables": "Response = <b><i>(( state = ap_transition_state & good & supported ) => STATE = ap_nominal_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+                        "post_condition_unexp_ft": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+                        "post_condition_SMV_pt": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+                        "post_condition_SMV_ft": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+                        "post_condition_coco_smv": "((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state))",
+                        "post_condition_coco": "((((state = ap_transition_state) and good) and supported) => (STATE = ap_nominal_state))",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+                        "ptFinBtwExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptFinBtwExpanded": "(H ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpanded": "(LAST V ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+                        "ftInfBtwExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfBtwExpanded": "(G ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+                        "ftFinBtwExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftFinBtwExpanded": "(LAST V ((((state = ap_transition_state) & good) & supported) -> (STATE = ap_nominal_state)))",
+                        "CoCoSpecCode_fetched": "(H($post_condition_coco$))",
+                        "CoCoSpecCode": "(H(((((state = ap_transition_state) and good) and supported) => (STATE = ap_nominal_state))))",
+                        "component": "FSM"
+                    },
+                    "_id": "9734f390-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-299d201cfd98d7f5fd8d69fa4fe5f60c"
+                },
+                {
+                    "reqid": "FSM-008",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The autopilot shall change states from STANDBY to TRANSITION when the pilot is not in control (not standby)",
+                    "fulltext": " FSM shall always satisfy (state = ap_standby_state & !standby) => STATE = ap_transition_state",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "state",
+                            "ap_standby_state",
+                            "standby",
+                            "STATE",
+                            "ap_transition_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            10,
+                            15
+                        ],
+                        "post_condition": "(( state = ap_standby_state & ! standby ) => STATE = ap_transition_state)",
+                        "responseTextRange": [
+                            17,
+                            92
+                        ],
+                        "diagramVariables": "Response = <b><i>(( state = ap_standby_state & ! standby ) => STATE = ap_transition_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+                        "post_condition_unexp_ft": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+                        "post_condition_SMV_pt": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+                        "post_condition_SMV_ft": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+                        "post_condition_coco_smv": "(((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state))",
+                        "post_condition_coco": "(((state = ap_standby_state) and ( not standby)) => (STATE = ap_transition_state))",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+                        "ptFinBtwExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptFinBtwExpanded": "(H (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpanded": "(LAST V (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+                        "ftInfBtwExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfBtwExpanded": "(G (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+                        "ftFinBtwExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftFinBtwExpanded": "(LAST V (((state = ap_standby_state) & (! standby)) -> (STATE = ap_transition_state)))",
+                        "CoCoSpecCode_fetched": "(H($post_condition_coco$))",
+                        "CoCoSpecCode": "(H((((state = ap_standby_state) and ( not standby)) => (STATE = ap_transition_state))))",
+                        "component": "FSM"
+                    },
+                    "_id": "973541b0-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-7bda1c6c430df287ba05f4b9ca4d4f65"
+                },
+                {
+                    "reqid": "FSM-011",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The sensor shall change states from NOMINAL to TRANSITION when the autopilot is not requesting support (not request)",
+                    "fulltext": "FSM shall always  satisfy (senstate = sen_nominal_state & !request) => SENSTATE = sen_transition_state",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "senstate",
+                            "sen_nominal_state",
+                            "request",
+                            "SENSTATE",
+                            "sen_transition_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            10,
+                            15
+                        ],
+                        "post_condition": "(( senstate = sen_nominal_state & ! request ) => SENSTATE = sen_transition_state)",
+                        "responseTextRange": [
+                            18,
+                            101
+                        ],
+                        "diagramVariables": "Response = <b><i>(( senstate = sen_nominal_state & ! request ) => SENSTATE = sen_transition_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+                        "post_condition_unexp_ft": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+                        "post_condition_SMV_pt": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+                        "post_condition_SMV_ft": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+                        "post_condition_coco_smv": "(((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state))",
+                        "post_condition_coco": "(((senstate = sen_nominal_state) and ( not request)) => (SENSTATE = sen_transition_state))",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+                        "ptFinBtwExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptFinBtwExpanded": "(H (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpanded": "(LAST V (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+                        "ftInfBtwExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfBtwExpanded": "(G (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+                        "ftFinBtwExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftFinBtwExpanded": "(LAST V (((senstate = sen_nominal_state) & (! request)) -> (SENSTATE = sen_transition_state)))",
+                        "CoCoSpecCode_fetched": "(H($post_condition_coco$))",
+                        "CoCoSpecCode": "(H((((senstate = sen_nominal_state) and ( not request)) => (SENSTATE = sen_transition_state))))",
+                        "component": "FSM"
+                    },
+                    "_id": "973568c0-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-e3e7e5ebae22832fbeb5fb89c19b3242"
+                },
+                {
+                    "reqid": "FSM-009",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The autopilot shall change states from STANDBY to MANEUVER when a failure occurs (apfail)",
+                    "fulltext": "FSM shall always satisfy (state = ap_standby_state & apfail )=> STATE = ap_maneuver_state",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "state",
+                            "ap_standby_state",
+                            "apfail",
+                            "STATE",
+                            "ap_maneuver_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            10,
+                            15
+                        ],
+                        "post_condition": "(( state = ap_standby_state & apfail ) => STATE = ap_maneuver_state)",
+                        "responseTextRange": [
+                            17,
+                            88
+                        ],
+                        "diagramVariables": "Response = <b><i>(( state = ap_standby_state & apfail ) => STATE = ap_maneuver_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+                        "post_condition_unexp_ft": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+                        "post_condition_SMV_pt": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+                        "post_condition_SMV_ft": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+                        "post_condition_coco_smv": "(((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state))",
+                        "post_condition_coco": "(((state = ap_standby_state) and apfail) => (STATE = ap_maneuver_state))",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+                        "ptFinBtwExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptFinBtwExpanded": "(H (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpanded": "(LAST V (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+                        "ftInfBtwExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfBtwExpanded": "(G (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+                        "ftFinBtwExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftFinBtwExpanded": "(LAST V (((state = ap_standby_state) & apfail) -> (STATE = ap_maneuver_state)))",
+                        "CoCoSpecCode_fetched": "(H($post_condition_coco$))",
+                        "CoCoSpecCode": "(H((((state = ap_standby_state) and apfail) => (STATE = ap_maneuver_state))))",
+                        "component": "FSM"
+                    },
+                    "_id": "9735b6e0-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-8745c5b93776e10cec97993047103fb5"
+                },
+                {
+                    "reqid": "FSM-012",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The sensor shall change states from FAULT to TRANSITION when the autopilot is not requesting support (not request) and limits are not exceeded (not limits)",
+                    "fulltext": "FSM shall  always  satisfy (senstate = sen_fault_state & !request & !limits) => SENSTATE = sen_transition_state",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "senstate",
+                            "sen_fault_state",
+                            "request",
+                            "limits",
+                            "SENSTATE",
+                            "sen_transition_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            11,
+                            16
+                        ],
+                        "post_condition": "(( senstate = sen_fault_state & ! request & ! limits ) => SENSTATE = sen_transition_state)",
+                        "responseTextRange": [
+                            19,
+                            110
+                        ],
+                        "diagramVariables": "Response = <b><i>(( senstate = sen_fault_state & ! request & ! limits ) => SENSTATE = sen_transition_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+                        "post_condition_unexp_ft": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+                        "post_condition_SMV_pt": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+                        "post_condition_SMV_ft": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+                        "post_condition_coco_smv": "((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state))",
+                        "post_condition_coco": "((((senstate = sen_fault_state) and ( not request)) and ( not limits)) => (SENSTATE = sen_transition_state))",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+                        "ptFinBtwExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptFinBtwExpanded": "(H ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpanded": "(LAST V ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+                        "ftInfBtwExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfBtwExpanded": "(G ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+                        "ftFinBtwExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftFinBtwExpanded": "(LAST V ((((senstate = sen_fault_state) & (! request)) & (! limits)) -> (SENSTATE = sen_transition_state)))",
+                        "CoCoSpecCode_fetched": "(H($post_condition_coco$))",
+                        "CoCoSpecCode": "(H(((((senstate = sen_fault_state) and ( not request)) and ( not limits)) => (SENSTATE = sen_transition_state))))",
+                        "component": "FSM"
+                    },
+                    "_id": "9735b6e1-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-dd466bb5e3ed4c708866c0971ba44a66"
+                },
+                {
+                    "reqid": "FSM-010",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The sensor shall change states from NOMINAL to FAULT when limits are exceeded",
+                    "fulltext": "FSM shall always satisfy (senstate = sen_nominal_state & limits) => SENSTATE = sen_fault_state",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "senstate",
+                            "sen_nominal_state",
+                            "limits",
+                            "SENSTATE",
+                            "sen_fault_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            10,
+                            15
+                        ],
+                        "post_condition": "(( senstate = sen_nominal_state & limits ) => SENSTATE = sen_fault_state)",
+                        "responseTextRange": [
+                            17,
+                            93
+                        ],
+                        "diagramVariables": "Response = <b><i>(( senstate = sen_nominal_state & limits ) => SENSTATE = sen_fault_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+                        "post_condition_unexp_ft": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+                        "post_condition_SMV_pt": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+                        "post_condition_SMV_ft": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+                        "post_condition_coco_smv": "(((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state))",
+                        "post_condition_coco": "(((senstate = sen_nominal_state) and limits) => (SENSTATE = sen_fault_state))",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+                        "ptFinBtwExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptFinBtwExpanded": "(H (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpanded": "(LAST V (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+                        "ftInfBtwExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfBtwExpanded": "(G (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+                        "ftFinBtwExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftFinBtwExpanded": "(LAST V (((senstate = sen_nominal_state) & limits) -> (SENSTATE = sen_fault_state)))",
+                        "CoCoSpecCode_fetched": "(H($post_condition_coco$))",
+                        "CoCoSpecCode": "(H((((senstate = sen_nominal_state) and limits) => (SENSTATE = sen_fault_state))))",
+                        "component": "FSM"
+                    },
+                    "_id": "97360500-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-392db0cce6662a64405626f73e3cf937"
+                },
+                {
+                    "reqid": "FSM-013",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The sensor shall change states from TRANSITION to NOMINAL when the autopilot is requesting support (request) and the autopilot reports the correct active mode (mode)",
+                    "fulltext": "FSM shall always satisfy (senstate = sen_transition_state & request) => SENSTATE = sen_nominal_state",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "senstate",
+                            "sen_transition_state",
+                            "request",
+                            "SENSTATE",
+                            "sen_nominal_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            10,
+                            15
+                        ],
+                        "post_condition": "(( senstate = sen_transition_state & request ) => SENSTATE = sen_nominal_state)",
+                        "responseTextRange": [
+                            17,
+                            99
+                        ],
+                        "diagramVariables": "Response = <b><i>(( senstate = sen_transition_state & request ) => SENSTATE = sen_nominal_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "(((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state))",
+                        "post_condition_unexp_ft": "(((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state))",
+                        "post_condition_SMV_pt": "(((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state))",
+                        "post_condition_SMV_ft": "(((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state))",
+                        "post_condition_coco_smv": "(((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state))",
+                        "post_condition_coco": "(((senstate = sen_transition_state) and request) => (SENSTATE = sen_nominal_state))",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V (((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state)))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H (((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state)))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H (((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state)))",
+                        "ptFinBtwExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptFinBtwExpanded": "(H (((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state)))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpanded": "(LAST V (((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state)))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G (((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state)))",
+                        "ftInfBtwExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfBtwExpanded": "(G (((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state)))",
+                        "ftFinBtwExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftFinBtwExpanded": "(LAST V (((senstate = sen_transition_state) & request) -> (SENSTATE = sen_nominal_state)))",
+                        "CoCoSpecCode_fetched": "(H($post_condition_coco$))",
+                        "CoCoSpecCode": "(H((((senstate = sen_transition_state) and request) => (SENSTATE = sen_nominal_state))))",
+                        "component": "FSM"
+                    },
+                    "_id": "97365320-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-0144223446cd9a64995320b37c0ddc5e"
+                },
+                {
+                    "reqid": "FSM-007",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The autopilot shall change states from PULLUP to TRANSITION when the system is supported and sensor data is good",
+                    "comments": "FSM shall always satisfy (state = ap_maneuver_state & supported & good) => STATE = ap_transition_state",
+                    "fulltext": "FSM shall within 5 ticks satisfy (state = ap_maneuver_state & supported & good) => STATE = ap_transition_state",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "within",
+                        "response": "satisfaction",
+                        "variables": [
+                            "state",
+                            "ap_maneuver_state",
+                            "supported",
+                            "good",
+                            "STATE",
+                            "ap_transition_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "duration": "5",
+                        "timingTextRange": [
+                            10,
+                            23
+                        ],
+                        "post_condition": "(( state = ap_maneuver_state & supported & good ) => STATE = ap_transition_state)",
+                        "responseTextRange": [
+                            25,
+                            109
+                        ],
+                        "diagramVariables": " n = <b><i>5</i></b>, Response = <b><i>(( state = ap_maneuver_state & supported & good ) => STATE = ap_transition_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at some point with distance <= <b><i>5</i></b> from the trigger (i.e., at trigger, trigger+1, ..., or trigger+<b><i>5</i></b>). If the interval ends sooner than trigger+<b><i>5</i></b>, then RES need not hold.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_within_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+                        "post_condition_unexp_ft": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+                        "post_condition_SMV_pt": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+                        "post_condition_SMV_ft": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+                        "post_condition_coco_smv": "((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))",
+                        "post_condition_coco": "((((state = ap_maneuver_state) and supported) and good) => (STATE = ap_transition_state))",
+                        "ft_fetched": "((F[<=$duration$] $post_condition_unexp_ft$) | (F[<$duration$] LAST))",
+                        "ft": "((F[<=5] ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))) | (F[<5] LAST))",
+                        "pt_fetched": "(H ((H (! $post_condition_unexp_pt$)) -> (O[<$duration$] FTP)))",
+                        "pt": "(H ((H (! ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))) -> (O[<5] FTP)))",
+                        "ptExpanded_fetched": "(H ((H (! $post_condition_SMV_pt$)) -> (O[<$duration$] (! (Y TRUE)))))",
+                        "ptExpanded": "(H ((H (! ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))) -> (O[0,4] (! (Y TRUE)))))",
+                        "ptFinBtwExpanded_fetched": "(H ((H (! $post_condition_SMV_pt$)) -> (O[<$duration$] (! (Y TRUE)))))",
+                        "ptFinBtwExpanded": "(H ((H (! ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))) -> (O[0,4] (! (Y TRUE)))))",
+                        "ftExpanded_fetched": "((F[<=$duration$] $post_condition_SMV_ft$) | (F[<$duration$] LAST))",
+                        "ftExpanded": "((F[0,5] ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))) | (F[0,4] LAST))",
+                        "ftInfAUExpanded_fetched": "(F[<=$duration$] $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(F[0,5] ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))",
+                        "ftInfBtwExpanded_fetched": "(F[<=$duration$] $post_condition_SMV_ft$)",
+                        "ftInfBtwExpanded": "(F[0,5] ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state)))",
+                        "ftFinBtwExpanded_fetched": "((F[<=$duration$] $post_condition_SMV_ft$) | (F[<$duration$] LAST))",
+                        "ftFinBtwExpanded": "((F[0,5] ((((state = ap_maneuver_state) & supported) & good) -> (STATE = ap_transition_state))) | (F[0,4] LAST))",
+                        "CoCoSpecCode_fetched": "(H((H( not $post_condition_coco$)) => (OT($duration$-1,0,FTP))))",
+                        "CoCoSpecCode": "(H((H( not ((((state = ap_maneuver_state) and supported) and good) => (STATE = ap_transition_state)))) => (OT(5-1,0,FTP))))",
+                        "component": "FSM"
+                    },
+                    "_id": "97367a30-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-fe5aa3115c95b5b08844948c11c7d0bc"
+                },
+                {
+                    "reqid": "FSM-004",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The autopilot shall change states from NOMINAL to MANEUVER when the sensor data is not good",
+                    "status": "",
+                    "fulltext": "FSM shall always satisfy (! good & state = ap_nominal_state) => STATE = ap_maneuver_state",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "good",
+                            "state",
+                            "ap_nominal_state",
+                            "STATE",
+                            "ap_maneuver_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            10,
+                            15
+                        ],
+                        "post_condition": "(( ! good & state = ap_nominal_state ) => STATE = ap_maneuver_state)",
+                        "responseTextRange": [
+                            17,
+                            88
+                        ],
+                        "diagramVariables": "Response = <b><i>(( ! good & state = ap_nominal_state ) => STATE = ap_maneuver_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+                        "post_condition_unexp_ft": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+                        "post_condition_SMV_pt": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+                        "post_condition_SMV_ft": "(((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state))",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+                        "CoCoSpecCode": "H(((not (good) and (state = ap_nominal_state)) => (STATE = ap_maneuver_state)))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpandedUnoptimized": "(LAST V (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+                        "ftExpanded": "(LAST V (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G (((! good) & (state = ap_nominal_state)) -> (STATE = ap_maneuver_state)))",
+                        "component": "FSM"
+                    },
+                    "template": {},
+                    "_id": "9736c850-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "3-49f7d326fd1bdbe61c29eaff461bcd1b"
+                },
+                {
+                    "reqid": "FSM-001",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "Exceeding sensor limits shall latch an autopilot pullup when the pilot is not in control (not standby) and the system is supported without failures (not apfail).",
+                    "fulltext": "FSM  shall  always  satisfy (limits & !standby & !apfail & supported) => pullup",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "always",
+                        "response": "satisfaction",
+                        "variables": [
+                            "limits",
+                            "standby",
+                            "apfail",
+                            "supported",
+                            "pullup"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "timingTextRange": [
+                            12,
+                            17
+                        ],
+                        "post_condition": "(( limits & ! standby & ! apfail & supported ) => pullup)",
+                        "responseTextRange": [
+                            20,
+                            78
+                        ],
+                        "diagramVariables": "Response = <b><i>(( limits & ! standby & ! apfail & supported ) => pullup)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at all time points between (and including) the trigger and the end of the interval.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+                        "post_condition_unexp_ft": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+                        "post_condition_SMV_pt": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+                        "post_condition_SMV_ft": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+                        "post_condition_coco_smv": "((((limits & (! standby)) & (! apfail)) & supported) -> pullup)",
+                        "post_condition_coco": "((((limits and ( not standby)) and ( not apfail)) and supported) => pullup)",
+                        "ft_fetched": "(LAST V $post_condition_unexp_ft$)",
+                        "ft": "(LAST V ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+                        "pt_fetched": "(H $post_condition_unexp_pt$)",
+                        "pt": "(H ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+                        "ptExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptExpanded": "(H ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+                        "ptFinBtwExpanded_fetched": "(H $post_condition_SMV_pt$)",
+                        "ptFinBtwExpanded": "(H ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+                        "ftExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftExpanded": "(LAST V ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+                        "ftInfAUExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfAUExpanded": "(G ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+                        "ftInfBtwExpanded_fetched": "(G $post_condition_SMV_ft$)",
+                        "ftInfBtwExpanded": "(G ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+                        "ftFinBtwExpanded_fetched": "(LAST V $post_condition_SMV_ft$)",
+                        "ftFinBtwExpanded": "(LAST V ((((limits & (! standby)) & (! apfail)) & supported) -> pullup))",
+                        "CoCoSpecCode_fetched": "(H($post_condition_coco$))",
+                        "CoCoSpecCode": "(H(((((limits and ( not standby)) and ( not apfail)) and supported) => pullup)))",
+                        "component": "FSM"
+                    },
+                    "_id": "9736ef60-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-daa6459d6ece97251312a2c6e5f7591a"
+                },
+                {
+                    "reqid": "FSM-006",
+                    "parent_reqid": "",
+                    "project": "FSM",
+                    "rationale": "The autopilot shall change states from MANEUVER to STANDBY when the pilot is in control (standby) and sensor data is good",
+                    "comments": "FSM shall always satisfy (state = ap_maneuver_state & standby & good) => STATE = ap_standby_state",
+                    "fulltext": "FSM shall for 5 ticks satisfy (state = ap_maneuver_state & standby & good) => STATE = ap_standby_state",
+                    "status": "",
+                    "semantics": {
+                        "type": "nasa",
+                        "scope": {
+                            "type": "null"
+                        },
+                        "condition": "null",
+                        "timing": "for",
+                        "response": "satisfaction",
+                        "variables": [
+                            "state",
+                            "ap_maneuver_state",
+                            "standby",
+                            "good",
+                            "STATE",
+                            "ap_standby_state"
+                        ],
+                        "component_name": "FSM",
+                        "componentTextRange": [
+                            0,
+                            2
+                        ],
+                        "duration": "5",
+                        "timingTextRange": [
+                            10,
+                            20
+                        ],
+                        "post_condition": "(( state = ap_maneuver_state & standby & good ) => STATE = ap_standby_state)",
+                        "responseTextRange": [
+                            22,
+                            101
+                        ],
+                        "diagramVariables": " n = <b><i>5</i></b>, Response = <b><i>(( state = ap_maneuver_state & standby & good ) => STATE = ap_standby_state)</i></b>.",
+                        "description": "ENFORCED: in the interval defined by the entire execution.\nTRIGGER: first point in the interval.\nREQUIRES: for every trigger, RES must hold at the trigger and remain true for <b><i>5</i></b> time points past the trigger (i.e., trigger, trigger+1, ..., and trigger+<b><i>5</i></b>), or to the end of the interval if the interval ends sooner than trigger+<b><i>5</i></b>.",
+                        "diagram": "_media/user-interface/examples/svgDiagrams/null_null_for_satisfaction.svg",
+                        "scope_mode_pt": "BAD_PT",
+                        "scope_mode_coco": "BAD_COCO",
+                        "scope_mode_ft": "BAD_FT",
+                        "post_condition_unexp_pt": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+                        "post_condition_unexp_ft": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+                        "post_condition_SMV_pt": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+                        "post_condition_SMV_ft": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+                        "post_condition_coco_smv": "((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))",
+                        "post_condition_coco": "((((state = ap_maneuver_state) and standby) and good) => (STATE = ap_standby_state))",
+                        "ft_fetched": "((G[<=$duration$] $post_condition_unexp_ft$) | (LAST V $post_condition_unexp_ft$))",
+                        "ft": "((G[<=5] ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))) | (LAST V ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))))",
+                        "pt_fetched": "(H ((O[<=$duration$] FTP) -> $post_condition_unexp_pt$))",
+                        "pt": "(H ((O[<=5] FTP) -> ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))))",
+                        "ptExpanded_fetched": "(H ((O[<=$duration$] (! (Y TRUE))) -> $post_condition_SMV_pt$))",
+                        "ptExpanded": "(H ((O[0,5] (! (Y TRUE))) -> ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))))",
+                        "ptFinBtwExpanded_fetched": "(H ((O[<=$duration$] (! (Y TRUE))) -> $post_condition_SMV_pt$))",
+                        "ptFinBtwExpanded": "(H ((O[0,5] (! (Y TRUE))) -> ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))))",
+                        "ftExpanded_fetched": "((G[<=$duration$] $post_condition_SMV_ft$) | (LAST V $post_condition_SMV_ft$))",
+                        "ftExpanded": "((G[0,5] ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))) | (LAST V ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))))",
+                        "ftInfAUExpanded_fetched": "((G[<=$duration$] $post_condition_SMV_ft$) | (G $post_condition_SMV_ft$))",
+                        "ftInfAUExpanded": "((G[0,5] ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))) | (G ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))))",
+                        "ftInfBtwExpanded_fetched": "((G[<=$duration$] $post_condition_SMV_ft$) | (G $post_condition_SMV_ft$))",
+                        "ftInfBtwExpanded": "((G[0,5] ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))) | (G ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))))",
+                        "ftFinBtwExpanded_fetched": "((G[<=$duration$] $post_condition_SMV_ft$) | (LAST V $post_condition_SMV_ft$))",
+                        "ftFinBtwExpanded": "((G[0,5] ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))) | (LAST V ((((state = ap_maneuver_state) & standby) & good) -> (STATE = ap_standby_state))))",
+                        "CoCoSpecCode_fetched": "(H((OT($duration$,0,FTP)) => $post_condition_coco$))",
+                        "CoCoSpecCode": "(H((OT(5,0,FTP)) => ((((state = ap_maneuver_state) and standby) and good) => (STATE = ap_standby_state))))",
+                        "component": "FSM"
+                    },
+                    "_id": "97373d80-a3b5-11eb-aaf4-fd96f2070919",
+                    "_rev": "1-10023691298c09d15feee35d04b98272"
+                }
+            ],
+            "selectedReqs": [
+                "FSM-002",
+                "FSM-005",
+                "FSM-003",
+                "FSM-008",
+                "FSM-011",
+                "FSM-009",
+                "FSM-012",
+                "FSM-010",
+                "FSM-013",
+                "FSM-007",
+                "FSM-004",
+                "FSM-001",
+                "FSM-006"
+            ]
+        }
+    ]
+}
