@@ -1,0 +1,13 @@
+llama3.2:1b
+llama3.2:3b
+
+ollama API.
+
+options: additonal model parameters such as temperature
+	** Need to set a constant temperature.
+	** System message?
+	** Template message?
+
+	context -- not likely to be needed.
+
+I don't believe I want a chat completion, I just want a completion.
